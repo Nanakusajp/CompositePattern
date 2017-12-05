@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CompositePattern
 {
-    class File : IExplorer
+    class File : IEntry
     {
         private string name;
 
@@ -24,6 +24,6 @@ namespace CompositePattern
             Console.WriteLine("File:" + name);
         }
 
-        public void AddComponent(IExplorer explorer) => throw new Exception();
+        public void AddComponent(IEntry explorer) => throw new Exception();
     }
 }

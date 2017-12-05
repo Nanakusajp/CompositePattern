@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace CompositePattern
 {
-    class Folder : IExplorer
+    class Folder : IEntry
     {
         private String name;
-        private List<IExplorer> fileList = new List<IExplorer>();
+        private List<IEntry> fileList = new List<IEntry>();
 
         public Folder(String name)
         {
@@ -23,13 +23,13 @@ namespace CompositePattern
                 Console.Write("  ");
             }
             Console.WriteLine("Folder:"+name);
-            foreach(IExplorer directory in fileList){
+            foreach(IEntry directory in fileList){
                 directory.Output(depth+1);
             }
 
         }
 
-        public void AddComponent(IExplorer explorer)
+        public void AddComponent(IEntry explorer)
         {
             fileList.Add(explorer);
         }

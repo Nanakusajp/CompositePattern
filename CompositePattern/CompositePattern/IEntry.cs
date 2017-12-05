@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace CompositePattern
 {
-    interface IExplorer
+    interface IEntry
     {
         void Output(int depth);
-        void AddComponent(IExplorer explorer);
+        void AddComponent(IEntry explorer);
     }
 }

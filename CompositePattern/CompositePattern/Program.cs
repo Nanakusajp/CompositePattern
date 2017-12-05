@@ -12,16 +12,16 @@ namespace CompositePattern
         {
             try
             {
-                IExplorer root = new Folder("root");
-                IExplorer user = new Folder("user");
-                IExplorer temp = new Folder("temp");
-                IExplorer documents = new Folder("document");
-                IExplorer game = new Folder("げぇむ");
+                IEntry root = new Folder("root");
+                IEntry user = new Folder("user");
+                IEntry temp = new Folder("temp");
+                IEntry documents = new Folder("document");
+                IEntry game = new Folder("げぇむ");
 
-                IExplorer gomi = new File("ごみ");
-                IExplorer ika = new File("ika");
-                IExplorer tako = new File("tako");
-                IExplorer salmon = new File("salmon");
+                IEntry gomi = new File("ごみ");
+                IEntry ika = new File("ika");
+                IEntry tako = new File("tako");
+                IEntry salmon = new File("salmon");
 
                 //フォルダを追加
                 root.AddComponent(user);
