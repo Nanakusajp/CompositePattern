@@ -9,7 +9,7 @@ namespace CompositePattern
     class Folder : IEntry
     {
         private String name;
-        private List<IEntry> fileList = new List<IEntry>();
+        private List<IEntry> entries = new List<IEntry>();
 
         public Folder(String name)
         {
@@ -23,15 +23,15 @@ namespace CompositePattern
                 Console.Write("  ");
             }
             Console.WriteLine("Folder:"+name);
-            foreach(IEntry directory in fileList){
-                directory.Output(depth+1);
+            foreach(IEntry entry in entries){
+                entry.Output(depth+1);
             }
 
         }
 
         public void AddComponent(IEntry explorer)
         {
-            fileList.Add(explorer);
+            entries.Add(explorer);
         }
     }
 }
