@@ -8,10 +8,10 @@ namespace CompositePattern
 {
     class Folder : IEntry
     {
-        private String name;
+        private string name;
         private List<IEntry> entries = new List<IEntry>();
 
-        public Folder(String name)
+        public Folder(string name)
         {
             this.name = name;
         }

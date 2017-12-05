@@ -10,7 +10,7 @@ namespace CompositePattern
     {
         private string name;
 
-        public File(String name)
+        public File(string name)
         {
             this.name = name;
         }
