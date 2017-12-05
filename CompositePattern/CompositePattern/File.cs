@@ -23,7 +23,6 @@ namespace CompositePattern
             }
             Console.WriteLine("File:" + name);
         }
-
-        public void AddComponent(IEntry explorer) => throw new Exception();
+        
     }
 }

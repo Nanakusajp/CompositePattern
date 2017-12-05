@@ -9,6 +9,5 @@ namespace CompositePattern
     interface IEntry
     {
         void Output(int depth);
-        void AddComponent(IEntry explorer);
     }
 }

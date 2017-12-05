@@ -12,28 +12,28 @@ namespace CompositePattern
         {
             try
             {
-                IEntry root = new Folder("root");
-                IEntry user = new Folder("user");
-                IEntry temp = new Folder("temp");
-                IEntry documents = new Folder("document");
-                IEntry game = new Folder("げぇむ");
+                var root = new Folder("root");
+                var user = new Folder("user");
+                var temp = new Folder("temp");
+                var documents = new Folder("document");
+                var game = new Folder("げぇむ");
 
-                IEntry gomi = new File("ごみ");
-                IEntry ika = new File("ika");
-                IEntry tako = new File("tako");
-                IEntry salmon = new File("salmon");
+                var gomi = new File("ごみ");
+                var ika = new File("ika");
+                var tako = new File("tako");
+                var salmon = new File("salmon");
 
                 //フォルダを追加
-                root.AddComponent(user);
-                root.AddComponent(temp);
-                user.AddComponent(documents);
-                user.AddComponent(game);
+                root.AddEntry(user);
+                root.AddEntry(temp);
+                user.AddEntry(documents);
+                user.AddEntry(game);
 
                 //ファイルを追加
-                temp.AddComponent(gomi);
-                game.AddComponent(ika);
-                game.AddComponent(tako);
-                game.AddComponent(salmon);
+                temp.AddEntry(gomi);
+                game.AddEntry(ika);
+                game.AddEntry(tako);
+                game.AddEntry(salmon);
 
                 root.Output(0);
             }

@@ -29,9 +29,9 @@ namespace CompositePattern
 
         }
 
-        public void AddComponent(IEntry explorer)
+        public void AddEntry(IEntry entry)
         {
-            entries.Add(explorer);
+            entries.Add(entry);
         }
     }
 }
